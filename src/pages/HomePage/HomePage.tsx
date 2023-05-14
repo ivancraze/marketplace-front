@@ -1,7 +1,11 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 
-import { TitleStyled } from './styled';
+import { ProductGroupStyled, ProductGroupContainerStyled } from './styled';
+import { PageWrapperStyled } from 'styles/styled';
+
+import { mockProducts } from 'mock/products';
+import ProductCard from 'components/ProductCard';
 
 const HomePage: React.FC = () => {
     return (
@@ -9,8 +13,17 @@ const HomePage: React.FC = () => {
             <Helmet>
                 <title>Главная - Marketplace</title>
             </Helmet>
+            <PageWrapperStyled>
+                <ProductGroupStyled>
+                    <h2>Рекомендуемые товары</h2>
 
-            <TitleStyled>Главная страница</TitleStyled>
+                    <ProductGroupContainerStyled>
+                        {mockProducts.map((p) => (
+                            <ProductCard {...p} key={p.id} />
+                        ))}
+                    </ProductGroupContainerStyled>
+                </ProductGroupStyled>
+            </PageWrapperStyled>
         </>
     );
 };

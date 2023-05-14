@@ -10,6 +10,7 @@ export const pathsPublic: { [k: string]: string } = {
 
 export const pathsPrivate: { [k: string]: string } = {
     accountSettings: '/account-settings',
+    favorites: '/favorites',
 };
 
 export const paths: { [k: string]: string } = Object.assign(
