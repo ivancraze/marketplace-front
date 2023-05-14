@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import colors from 'styles/colors';
 
 interface IButtonProps {
-    type?: 'primary' | 'secondary' | 'ghost';
+    type?: 'primary' | 'secondary' | 'ghost' | 'danger';
     children?: React.ReactNode;
     block?: boolean;
     disabled?: boolean;
@@ -51,6 +51,8 @@ const Button = styled(
                 return colors.secondary;
             case 'ghost':
                 return 'transparent';
+            case 'danger':
+                return colors.danger;
             default:
                 return colors.primary;
         }

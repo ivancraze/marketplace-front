@@ -1,9 +1,9 @@
-import { useState, useCallback, useRef, FC } from 'react';
+import React, { useState, useCallback, useRef, FC } from 'react';
 import { useOnClickOutside } from 'utils/hooks';
 import { WrapperStyled, DropdownWrapperStyled } from './styled';
 
 interface IDropdownPanel {
-    toggler: any;
+    toggler: (props: any) => React.ReactElement;
     children: React.ReactElement;
     toLeft?: boolean;
 }

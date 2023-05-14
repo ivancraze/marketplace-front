@@ -6,6 +6,7 @@ import { paths } from 'routes/helpers';
 import Button from 'components/common/Button';
 import Input from 'components/common/Input';
 import { selectIsLogged } from 'store/appStore/selectors';
+import { selectFavorites } from 'store/favorites/selectors';
 import UserDropdownMenu from './components/UserDropdownMenu/UserDropdownMenu';
 import logoPng from './assets/logo.png';
 
@@ -27,6 +28,7 @@ const Header: React.FC = () => {
     // const location = useLocation()
 
     const isLogged = useSelector(selectIsLogged);
+    const favorites = useSelector(selectFavorites);
 
     const [searchInput, setSearchInput] = useState<string>('');
 
@@ -76,8 +78,8 @@ const Header: React.FC = () => {
             <RightSideStyled>
                 {isLogged ? (
                     <>
-                        <BtnOrdersStyled count={2} />
-                        <BtnFavoritesStyled />
+                        <BtnOrdersStyled />
+                        <BtnFavoritesStyled count={favorites.length} />
                         <BtnNotificationsStyled />
                         <BtnCartStyled />
                         <UserDropdownMenu />

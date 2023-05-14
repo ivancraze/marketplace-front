@@ -30,3 +30,5 @@ enum Gender {
     Male = 'm',
     Female = 'f',
 }
+
+export type IFavorites = number[];
