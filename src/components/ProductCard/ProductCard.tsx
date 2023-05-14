@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 
 import Button from 'components/common/Button';
 // import { addToFavorites, removeFromFavorites } from 'features/Favorites/reducer'
-import { ReactComponent as HeartEmpty } from './img/heart-empty.svg';
-// import { ReactComponent as HeartFilled } from './img/heart-filled.svg'
+import { ReactComponent as HeartEmpty } from './assets/heart-empty.svg';
+// import { ReactComponent as HeartFilled } from './assets/heart-filled.svg'
 import {
     WrapperStyled,
     LikeWrapperStyled,
